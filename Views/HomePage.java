@@ -1,13 +1,8 @@
 package Views;
 
-import java.lang.*;
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
-import javax.swing.JFrame;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class HomePage extends JFrame implements ActionListener
 {
@@ -17,31 +12,36 @@ public class HomePage extends JFrame implements ActionListener
 
 	public HomePage()
 	{
-		super("HomePage");
-		this.setSize(800,450);
+		super("CSE470 Project");
+		this.setSize(600,300);
+		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 
 		panel = new JPanel();
 		panel.setLayout(null);
 
-		label = new JLabel("Book Store");
-		label.setBounds(350, 10, 350, 30);
-		panel.add(label);
+//		label = new JLabel("Book Store");
+//		label.setBounds(350, 10, 350, 30);
+//		panel.add(label);
+
+        label = new JLabel("Welcome to BRAC Book Store");
+        label.setBounds(220, 10, 350, 30);
+        panel.add(label);
 
 		loginBtn = new JButton("Login");
-		loginBtn.setBounds(80, 360, 100, 30);
+		loginBtn.setBounds(80, 200, 100, 30);
 		panel.add(loginBtn);
 		loginBtn.addActionListener(this);
 
 		signUpBtn = new JButton("Sign Up");
-		signUpBtn.setBounds(350, 360, 100, 30);
+		signUpBtn.setBounds(250, 200, 100, 30);
 		panel.add(signUpBtn);
 		signUpBtn.addActionListener(this);
 
 
 		exitBtn = new JButton("Exit");
-		exitBtn.setBounds(680, 360, 80, 30);
+		exitBtn.setBounds(430, 200, 80, 30);
 		panel.add(exitBtn);
 		exitBtn.addActionListener(this);
 

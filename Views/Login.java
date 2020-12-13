@@ -1,14 +1,10 @@
 package Views;
 
-import java.lang.*;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import Controller.LoginController;
 
-import java.sql.*;
-import Controller.*;
-import Model.*;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class Login extends JFrame implements ActionListener
@@ -23,6 +19,7 @@ public class Login extends JFrame implements ActionListener
 	{
 		super("Login");
 		this.setSize(800,450);
+        this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 

@@ -1,14 +1,10 @@
 package Views;
 
-import java.lang.*;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import Controller.UserController;
 
-import java.sql.*;
-import Controller.*;
-import Model.*;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class SignUp extends JFrame implements ActionListener
@@ -23,13 +19,14 @@ public class SignUp extends JFrame implements ActionListener
 	{
 		super("SignUp");
 		this.setSize(800,450);
+        this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 
 		panel = new JPanel();
 		panel.setLayout(null);
 
-		label = new JLabel("BRAC Library");
+		label = new JLabel("AIUB Library");
 		label.setBounds(350, 10, 350, 30);
 		panel.add(label);
 

@@ -1,14 +1,15 @@
 package Views;
 
-import java.lang.*;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import Controller.PurchaseController;
+import Model.DatabaseConnection;
+import Model.UserModel;
 
-import java.sql.*;
-import Controller.*;
-import Model.*;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.util.Vector;
 
 
 public class BuyBook extends JFrame implements ActionListener
@@ -28,6 +29,7 @@ public class BuyBook extends JFrame implements ActionListener
 	{
 		super("BuyBook");
 		this.setSize(800,450);
+        this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 
@@ -37,6 +39,26 @@ public class BuyBook extends JFrame implements ActionListener
 		label = new JLabel("Book Store");
 		label.setBounds(350, 10, 350, 30);
 		panel.add(label);
+
+		label = new JLabel("Name");
+		label.setBounds(500, 10, 350, 30);
+		panel.add(label);
+
+        label = new JLabel("Author");
+        label.setBounds(550, 10, 350, 30);
+        panel.add(label);
+
+        label = new JLabel("Year");
+        label.setBounds(600, 10, 350, 30);
+        panel.add(label);
+
+        label = new JLabel("Price");
+        label.setBounds(650, 10, 350, 30);
+        panel.add(label);
+
+        label = new JLabel("Quantity");
+        label.setBounds(700, 10, 350, 30);
+        panel.add(label);
 
 
 

@@ -22,32 +22,29 @@ public class LoginController
 		try
 		{
 			dbc.openConnection();
-      ResultSet rs = dbc.st.executeQuery("SELECT `password` FROM `users` WHERE `userName`='"+userName+"';");
+			ResultSet rs = dbc.st.executeQuery("SELECT `password` FROM `users` WHERE `userName`='"+userName+"';");
 			while(rs.next())
-      //System.out.println(rs.getString(1));
-      if(password.equals(rs.getString(1))){
-        BuyBook bb = new BuyBook();
+			if(password.equals(rs.getString(1))){
+				if(userName.equals("admin"))
+				{
+					AdminPanel ap = new AdminPanel();
+					ap.setVisible(true);
+				}
+				else
+				{
+				BuyBook bb = new BuyBook();
 				bb.setVisible(true);
-				//this.setVisible(false);
-      }else{
-        Login lg = new Login();
-  			lg.setVisible(true);
-  			//this.setVisible(false);
-      }
-			//JOptionPane.showMessageDialog(this, "Sign Up Successful");
-
-			// HomePage abf = new HomePage();
-			// abf.setVisible(true);
-			// //this.setVisible(false);
+				}
+			}
+			else
+			{
+				Login lg = new Login();
+				lg.setVisible(true);
+			}
 		}
 		catch(Exception ex){System.out.println(ex.getMessage());
 
 		}
-		// JOptionPane.showMessageDialog(this, "Sign Up Successful");
-		//
-		// HomePage abf = new HomePage();
-		// abf.setVisible(true);
-		// this.setVisible(false);
 
 	}
 }
